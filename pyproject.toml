@@ -1,0 +1,39 @@
+[project]
+name = "datasette-demo-for-llm-accountant"
+version = "0.1"
+description = "Demo app for LLM accountant"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = "Apache-2.0"
+classifiers=[
+    "Framework :: Datasette"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "datasette>=1.0a21",
+    "llm",
+    "datasette-llm-accountant>=0.1a0"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/datasette/datasette-demo-for-llm-accountant"
+Changelog = "https://github.com/datasette/datasette-demo-for-llm-accountant/releases"
+Issues = "https://github.com/datasette/datasette-demo-for-llm-accountant/issues"
+CI = "https://github.com/datasette/datasette-demo-for-llm-accountant/actions"
+
+[project.entry-points.datasette]
+demo_for_llm_accountant = "datasette_demo_for_llm_accountant"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.setuptools.package-data]
+datasette_demo_for_llm_accountant = ["templates/*"]
