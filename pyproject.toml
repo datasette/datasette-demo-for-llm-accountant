@@ -1,6 +1,6 @@
 [project]
 name = "datasette-demo-for-llm-accountant"
-version = "0.1"
+version = "0.1a0"
 description = "Demo app for LLM accountant"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
